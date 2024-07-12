@@ -18,11 +18,11 @@ model = InceptionModel(num_blocks=4,
 model.load_state_dict(torch.load(PATH, map_location=torch.device('cpu')))
 model.eval()
 
-def segment_recording2(recording, segment_length=8000):
+def segment_recording2(recording, segment_length=2000):
     """Segment a recording into 10-second chunks."""
     # num_segments = recording.shape[0] // segment_length
     segments = []
-    for i in range(0,len(recording) - segment_length + 1, 100):
+    for i in range(0,len(recording) - segment_length + 1, 500):
       segment = recording[i:i+segment_length]
       segments.append(segment)
     num_segments = len(segments)

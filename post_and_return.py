@@ -33,4 +33,3 @@ if uploaded_file is not None:
 
 # print("Status Code:", response.status_code)
 # print("Response JSON:", response.json())
-
